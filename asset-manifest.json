@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/Twigle/static/css/main.399a258f.css",
+    "main.js": "/Twigle/static/js/main.19fd0c60.js",
+    "static/media/dashboard_bg.png": "/Twigle/static/media/dashboard_bg.ea34c9afd0d1d7d3b1ba.png",
+    "static/media/bg_login.jpg": "/Twigle/static/media/bg_login.e20c79bbdd0e2ce33501.jpg",
+    "static/media/tree_logo.png": "/Twigle/static/media/tree_logo.1dbad5f6240954039f6c.png",
+    "static/media/tree.png": "/Twigle/static/media/tree.9e70615a5ebab4f8d0d1.png",
+    "static/media/neuralink.png": "/Twigle/static/media/neuralink.d1d63bba66cd975747b9.png",
+    "index.html": "/Twigle/index.html",
+    "main.399a258f.css.map": "/Twigle/static/css/main.399a258f.css.map",
+    "main.19fd0c60.js.map": "/Twigle/static/js/main.19fd0c60.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.399a258f.css",
+    "static/js/main.19fd0c60.js"
+  ]
+}
