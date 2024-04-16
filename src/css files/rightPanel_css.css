@@ -1,0 +1,249 @@
+.right-panel {
+    width: 20%;
+    height: 96.65%;
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    flex: none;
+    overflow-y: scroll;
+    border-radius: 10px;
+}
+
+.right-panel::-webkit-scrollbar {
+    width: 0;
+    visibility: hidden;
+}
+.search-container {
+    display: flex;
+    align-items: center;
+    background-color: black;
+    border-radius: 9999px;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.search-icon {
+    height: 1.5rem;
+    width: 1.5rem;
+    color: rgb(74, 169, 92);
+}
+
+.search-input {
+    flex: 1;
+    background-color: transparent;
+    color: #007BFF;
+    border: 0;
+    outline: none;
+}
+
+.whats-sprouting {
+    background-color: black;
+    border-radius: 1rem;
+    padding-inline: 20px;
+    color: rgb(74, 169, 92);
+}
+
+.whats-sprouting-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.news-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.news-meta {
+    font-size: 0.75rem;
+    color: #007BFF;
+    margin-bottom: 0;
+}
+
+.news-heading {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 0;;
+}
+
+.additional-text {
+    color: lightgray;
+    font-size: small;
+    font-weight: none;
+}
+
+.post-comment {
+    background-color: #333;
+    margin-top: 15px;
+    border-radius: 10px;
+    border: 2px solid rgb(74, 169, 92);
+    color: #007BFF;
+    font-weight: bold;
+    font-family: system-ui, -apple-system;
+}
+
+.comment-submit-button {
+    float: right;
+    margin-right: 20px;
+    margin-top: 25px;
+    transform: scale(1.2);
+    font-weight: bold;
+    background-color: black;
+    color: rgb(74, 169, 92);
+    border-radius: 9999px;
+    border: 2px solid #007BFF;
+    cursor: pointer;
+}
+
+.comment-delete-button {
+    margin-left: 20px;
+    transform: scale(1.1);
+    font-weight: bold;
+    background-color: black;
+    color: red;
+    border-radius: 9999px;
+    border: 2px solid red;
+    cursor: pointer;
+}
+
+.comment-submit-button:hover {
+    background-color: rgb(74, 169, 92);
+    color: black;
+}
+.comment-delete-button:hover {
+    background-color: red;
+    color: black;
+}
+
+.comments-header {
+    margin-bottom: -10px;
+}
+
+.comment {
+    font-family: system-ui, -apple-system;
+    font-weight: bold;
+    color: #007BFF;
+}
+
+.post-comment:hover {
+    border: 2px solid #007BFF;
+}
+
+.news-highlight {
+    font-weight: bold;
+    color:rgb(74, 169, 92);
+}
+
+.news-tags {
+    font-size: 0.75rem;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.tag {
+    color: #007BFF;
+    cursor: pointer;
+}
+
+.news-img {
+    border-radius: 10px;
+    height: 125px;
+    width: 110px;
+    object-fit: cover;
+    margin-left: 3px;
+}
+
+.show-more {
+    color: #007BFF;
+    cursor: pointer;
+}
+
+.node-suggestions {
+    background-color: black;
+    border-radius: 1rem;
+    padding-inline: 20px;
+    color: rgb(74, 169, 92);
+}
+
+.node-suggestions-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.node-item {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.profile-info {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.profile-img {
+    margin-top: 0px;
+    border-radius: 50%;
+    height: 2.5rem;
+    width: 2.5rem;
+    object-fit: cover;
+    padding: 2px;
+    border: 2px solid #007BFF;
+}
+
+.profile-name {
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.profile-handle {
+    margin-top: -37px;
+    font-size: 0.75rem;
+    color: #007BFF;
+    cursor: pointer;
+}
+
+.connect-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: sticky;
+    left: 95%;
+    z-index: 99;
+    background-color: black;
+    border: 2px solid #007BFF;
+    color: #007BFF;
+    border-radius: 9999px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.connect-button:hover {
+    background-color: rgb(74, 169, 92);
+    color: black;
+}
+
+.connect-button.connected {
+    background-color: rgb(74, 169, 92);
+    color: black;
+}
+
+.connect-button.connected:hover {
+    background-color: black;
+    color: rgb(74, 169, 92);
+}
+
+.show-more {
+    color: #007BFF;
+    cursor: pointer;
+}

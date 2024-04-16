@@ -1,0 +1,167 @@
+.feed-container {
+    border-radius: 25px;
+    width: 40%;
+    margin: 2px auto;
+    margin-left: 17.5%;
+    overflow-y: scroll;
+}
+
+.feed-container::-webkit-scrollbar {
+    width: 0;
+    visibility: hidden;
+}
+
+.feed-post {
+    display: flex;
+    background-color: black;
+    border: 1px solid #007BFF;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.img {
+    color: rgb(74, 169, 92);
+    height: 40px;
+    width: 40px;
+    margin-top: 2px;
+    padding: 2px;
+    border-radius: 50%;
+    margin-right: 5px;
+    border: 2px solid #007BFF;
+    background-color: black;
+}
+
+.post-content {
+    flex: 1;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.post-textarea {
+    width: 90%;
+    padding: 10px;
+    height: 150px;
+    resize: none;
+    background-color: #333;
+    color: white;
+    font-family: system-ui, -apple-system;
+    font-weight: bold;
+    border: 2px solid #007BFF;
+    border-radius: 10px;
+}
+
+.hashtag {
+    color: #007BFF;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    border-radius: 10px;
+}
+
+.post-button-container {
+    display: flex;
+    justify-content: space-around;
+    border-radius: 15px;
+}
+
+.post-button {
+    width: 80px;
+    margin-top: 3px;
+    padding: 10px;
+    background-color: black;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 15px;
+    border: 2px solid #007BFF;
+    cursor: pointer;
+}
+
+.post-button:hover {
+    color: rgb(74, 169, 92);
+    transform: scale(1.05);
+    font-weight: bolder;
+}
+
+.post-list {
+    width: 100%;
+}
+
+.post-item {
+    display: flex;
+    background-color: #000;
+    border-bottom: 2px solid #007BFF;
+    border-radius: 20px;
+    margin: 2px;
+    padding: 10px;
+}
+
+.author {
+    margin-top: 0px;
+    font-weight: bold;
+    color: #007BFF;
+    cursor: pointer;
+}
+
+.timestamp {
+    margin-top: -15px;
+    color: rgb(74, 169, 92);
+}
+
+.post-content {
+    width: 90%;
+    padding: 10px;
+    background-color: rgb(74, 169, 92);
+    color: #fff;
+    word-wrap: break-word;
+}
+
+.like-button {
+    height: 32px;
+    width: auto;
+    padding: 6px;
+    cursor: pointer;
+}
+
+.like-button:hover {
+    transform: scale(1.1);
+}
+
+.delete-button, .edit-button {
+    height: 32px;
+    width: auto;
+    transform: scale(1.1);
+    padding: 6px;
+    cursor: pointer;
+    color: white;
+}
+
+.delete-button:hover {
+    transform: scale(1.2);
+    color: red;
+}
+
+.edit-button:hover {
+    transform: scale(1.2);
+    color: #007BFF;
+}
+
+.new-post {
+    background-color: black;
+}
+
+.original-post .post-textarea {
+    background-color: #333;
+    border: 2px solid #007BFF;
+}
+
+.post-item .post-content {
+    background-color: #333;
+    border: 2px solid #007BFF;
+    font-weight: bold;
+    width: 600px;
+    height: auto;
+}
