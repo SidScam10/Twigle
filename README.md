@@ -2,4 +2,4 @@ To access Administartor UI - Register Account with username "admin" along with s
 
 Happy Twigling!
 
-P.S the website is sccaled for display resolution of only 100%, anything else might break the site - Zoom In/Out respectively such none of buttons overlap with each other
+P.S the website is scaled for display resolution of only 100%, anything else might break the site - Zoom In/Out respectively such none of buttons overlap with each other
