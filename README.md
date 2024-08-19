@@ -1,4 +1,5 @@
 To access Administartor UI - Register Account with username "admin" along with suitable password and login with the same.
+Optimal webpage output is shown in the "Working Screenshots.pdf" file
 
 Happy Twigling!
 
