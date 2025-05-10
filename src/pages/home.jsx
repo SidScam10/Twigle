@@ -24,12 +24,12 @@ function Home()
     return (
     <div className="home_body"> 
         <div className="home_navigation">
-            <h1 className="home_header">Welcome to Twigle</h1>
+            <h1 className="home_header">Welcome to <span className="Twigle">Twigle</span></h1>
             <ul className="home_list">
                 <li className="home_element"><Link to="/register">Register</Link></li>
                 <li className="home_element"><Link to="/login">Login</Link></li>
+                <li><img src={Tree_Logo} className='logo'></img></li>
             </ul>
-            <img src={Tree_Logo} className='logo'></img>
         </div>
     </div>)
 }
