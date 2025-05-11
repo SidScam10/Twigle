@@ -9,11 +9,17 @@ import { AiOutlineBranches } from "react-icons/ai";
 import { MdForest } from "react-icons/md";
 
 export default function LeftPanel() {
+    const navigate = useNavigate();
+
+    const handleHomeClick = () => {
+        navigate(0);
+    };
+
     return (
         <div className="left-panel">
             <div className="menu">
-                <div className="menu-item">
-                        <GiTreehouse className='icon'/>
+                <div className="menu-item" onClick={handleHomeClick}>
+                    <GiTreehouse className='icon'/>
                     <h3 className="left_panel_text">
                         Home
                     </h3>
