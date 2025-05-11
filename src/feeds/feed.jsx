@@ -117,7 +117,7 @@ export default function Feed() {
                 </div>
             </div>
             <div className="post-list">
-                {twigle.map((task) => {
+                {[...twigle].reverse().map((task) => { //Reverse order of posts
                     //If user is admin display special profile_pic and enable special administrative buttons
                     return (
                         <div className="post-item" key={task.postID}>
