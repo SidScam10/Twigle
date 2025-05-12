@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react'
-import {logoutUser} from '../util/localStorage'
+import {logoutUser} from '../util/auth'
 import {useNavigate} from 'react-router-dom'
 
 function Logout() 

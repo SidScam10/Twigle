@@ -1,14 +1,13 @@
 import React, { useEffect } from 'react'
-import { useLoggedInUser } from '../util/localStorage'
+import { useLoggedInUser } from '../util/auth'
 import { Link, useNavigate } from 'react-router-dom'
 import '../css files/home_css.css'
 import Tree_Logo from '../assets/tree_logo.png'
 
 function Home()
 {
-    const user = useLoggedInUser;
     const navigate = useNavigate();
-    const isLoggedIn = useLoggedInUser;
+    const [isLoggedIn, user] = useLoggedInUser();
     
     //If logged in reroute to dashboard page
     useEffect(() => {

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useLoggedInUser } from '../util/localStorage';
+import { useLoggedInUser } from '../util/auth';
 import { useNavigate, Link } from 'react-router-dom';
 import Feed from '../feeds/feed.jsx';
 import LeftPanel from '../feeds/leftPanel.jsx';

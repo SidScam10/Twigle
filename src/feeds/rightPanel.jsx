@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Neuralink from '../assets/neuralink.png';
-import { useLoggedInUser } from '../util/localStorage';
+import { useLoggedInUser } from '../util/auth';
 import { TbBinaryTree2 } from "react-icons/tb";
 import { GiPalmTree } from "react-icons/gi";
 import { SiTreehouse } from "react-icons/si";
@@ -94,7 +94,7 @@ export default function RightPanel() {
                                         <p className="comment">
                                             {comment} 
                                             {/*If admin enable delete comment button otherwise disable it*/}
-                                            {(username === "admin") ? (
+                                            {(username === "admin@gmail.com") ? (
                                                 <button onClick={() => deleteComment(index)} className='comment-delete-button'>-</button>
                                             ) : ("")}
                                         </p>
@@ -154,7 +154,7 @@ export default function RightPanel() {
                         {isConnected2 ? 'Connected' : 'Connect'}
                     </button>
                 </div>
-                {(username === "admin") ? (
+                {(username === "admin@gmail.com") ? (
                     <>
                         <div className="node-item">
                             <div className="profile-info">

@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { GiPalmTree } from "react-icons/gi";
-import { useLoggedInUser } from '../util/localStorage';
+import { useLoggedInUser } from '../util/auth';
 import { FaHeart } from "react-icons/fa6";
 import { MdDelete } from "react-icons/md";
 import { MdEdit } from "react-icons/md";
@@ -87,7 +87,7 @@ export default function Feed() {
         <div className="feed-container">
             <div className="feed-post">
                 <div className="profile-pic">
-                    {(username === "admin") ? (
+                    {(username === "admin@gmail.com") ? (
                         <SiTreehouse className='img'/>
                     ) : (
                         <GiPalmTree className='img'/>
@@ -122,7 +122,7 @@ export default function Feed() {
                     return (
                         <div className="post-item" key={task.postID}>
                             <div className="profile-pic">
-                                {(username === "admin") ? (
+                                {(username === "admin@gmail.com") ? (
                                     <SiTreehouse className='img'/>
                                 ) : (
                                     <GiPalmTree className='img'/>
@@ -143,7 +143,7 @@ export default function Feed() {
                                     })}
                                 </div>
                                 <div className="post-button-container">
-                                {username === "admin" ? (
+                                {username === "admin@gmail.com" ? (
                                         <>
                                             <FaHeart onClick={() => likedBtn(task.postID)} className="like-button" fill={task.liked ? 'rgb(74, 169, 92)' : 'white'} />
                                             <MdDelete onClick={() => deletePost(task.postID)} className="delete-button" />

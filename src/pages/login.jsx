@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { loginUser } from '../util/localStorage'
+import { loginUser } from '../util/auth'
 import { useNavigate } from 'react-router-dom'
 import '../css files/login_css.css'
 import Tree_Logo from '../assets/tree_logo.png'
@@ -10,10 +10,10 @@ export default function Login()
 
     const [username,setUsername] = useState('')
     const [password, setPassword] = useState('')
-    function attemptloginUser(event) 
+    async function attemptloginUser(event) 
     {
         event.preventDefault()
-        const response = loginUser({username,password})
+        const response = await loginUser({username,password})
 
         if(response.status === 'success')
         {
@@ -31,7 +31,7 @@ export default function Login()
     <div className="login_body">
         <form className="login_form" onSubmit={attemptloginUser}>
             <h1 className="login_header">Login to Twigle</h1>
-            <input type="text" placeholder="Username" value={username} onChange={event => setUsername(event.target.value)}/><br/>
+            <input type="email" placeholder="Email" value={username} onChange={event => setUsername(event.target.value)}/><br/>
             <input type="password" placeholder="Password" value={password} onChange={event => setPassword(event.target.value)}/><br/>
             <input type= "submit" value="Login" /><br/>
             <img src={Tree_Logo} className='login_logo'></img>
