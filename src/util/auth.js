@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "firebase/auth"
-import { auth } from "./firebase"
+import { auth } from "../firebase"
 
 const USER_DB_KEY = "Account-Database"
 const AUTH_USER_KEY = "Account-Authentication"
