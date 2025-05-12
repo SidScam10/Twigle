@@ -6,7 +6,7 @@ import Register from './pages/register.jsx';
 import Dashboard from './pages/dashboard.jsx'
 import Logout from './pages/logout.jsx'
 import "./App.css"
-console.log(import.meta.env.VITE_FIREBASE_API_KEY)
+
 //Function to create basic navigation through pages
 function App() 
 {
