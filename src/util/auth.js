@@ -2,16 +2,13 @@ import { useEffect, useState } from "react"
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "firebase/auth"
 import { auth } from "../firebase"
 
-const USER_DB_KEY = "Account-Database"
-const AUTH_USER_KEY = "Account-Authentication"
-
 export function logoutUser()
 {
     return signOut(auth);
 }
 export function useLoggedInUser()
 {
-    const [username,setUsername] = useState('');
+    const [email,setUsername] = useState('');
     const [isLoggedIn, setIsLoggedIn] = useState('unknown');
 
     //Check if user is logged in or not while in dashboard
@@ -29,7 +26,7 @@ export function useLoggedInUser()
         return () => unsub();
     }, []);
 
-    return [ isLoggedIn, username ]
+    return [ isLoggedIn, email ]
 }
 
 export async function loginUser({username,password}) {

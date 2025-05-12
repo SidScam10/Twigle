@@ -8,10 +8,11 @@ import Tree from './tree.jsx'
 import '../css files/dashboard_css.css'
 
 export default function Dashboard() {
-    const [isLoggedIn, username] = useLoggedInUser();
+    const [isLoggedIn, email] = useLoggedInUser();
     const navigate = useNavigate();
     const [showTree, setShowTree] = useState(true);
-
+    const username=email.replaceAll(/@.*/g,"");
+    
     useEffect(() => {
         if (isLoggedIn === 'no') {
             navigate('/');

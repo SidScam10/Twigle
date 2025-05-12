@@ -19,7 +19,7 @@ export default function Feed() {
         //Creates a unique post ID each time
         postID: twigle.length === 0 ? 1 : twigle[twigle.length - 1].postID + 1, 
         contents: newPost,
-        author: username,
+        author: username.replaceAll(/@.*/g,""),
         createdOn: Date(Date.now()).toString().substring(0, 21),
         updatedOn: Date.now(),
     };

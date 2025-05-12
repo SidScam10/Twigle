@@ -12,7 +12,7 @@ import { LiaPrayingHandsSolid } from "react-icons/lia";
 import '../css files/rightPanel_css.css'
 
 export default function RightPanel() {
-    const [isLoggedIn, username] = useLoggedInUser();
+    const [isLoggedIn, email] = useLoggedInUser();
     const [isConnected1, setIsConnected1] = useState(false);
     const [isConnected2, setIsConnected2] = useState(false);
     const [isConnected3, setIsConnected3] = useState(false);
@@ -23,6 +23,7 @@ export default function RightPanel() {
     const [showMoreNews, setShowMoreNews] = useState(false);
     const [comments, setComments] = useState([]);
     const [comment, setComment] = useState('');
+    const user=email.replaceAll(/@.*/g,"");
 
     const handleConnectToggle1 = () => {
         setIsConnected1(!isConnected1);
@@ -94,7 +95,7 @@ export default function RightPanel() {
                                         <p className="comment">
                                             {comment} 
                                             {/*If admin enable delete comment button otherwise disable it*/}
-                                            {(username === "admin@gmail.com") ? (
+                                            {(user === "admin") ? (
                                                 <button onClick={() => deleteComment(index)} className='comment-delete-button'>-</button>
                                             ) : ("")}
                                         </p>
@@ -154,7 +155,7 @@ export default function RightPanel() {
                         {isConnected2 ? 'Connected' : 'Connect'}
                     </button>
                 </div>
-                {(username === "admin@gmail.com") ? (
+                {(user === "admin") ? (
                     <>
                         <div className="node-item">
                             <div className="profile-info">
