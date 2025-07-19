@@ -37,7 +37,11 @@ export default function Dashboard() {
             <div className='left-panel'>
                 <LeftPanel />
                 <div className='user-info-container'>
-                    <div className='user-info'>Hello, <span className="user-info-username">{username}</span> </div>
+                    <div className='user-info'>Hello, <br/> 
+                    <span className="user-info-username-container">
+                        <span className="user-info-username">{username}</span> 
+                    </span>
+                    </div>
                     <Link to='/logout'>
                         <button className='logout-button'>
                             Logout

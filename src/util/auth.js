@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "firebase/auth"
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut, GoogleAuthProvider, signInWithPopup } from "firebase/auth"
 import { auth } from "../firebase"
 
 export function logoutUser()
@@ -52,5 +52,16 @@ export async function createUser({ username, password })  {
         if (err.code === "auth/email-already-in-use") msg = "User already exists";
         else if (err.code === "auth/weak-password") msg = "Password too weak";
         return { status: "error", error: msg };
+    }
+}
+
+export async function loginWithGoogle() {
+    try {
+        const provider = new GoogleAuthProvider();
+        await signInWithPopup(auth, provider);
+        return { status: "success" };
+    }
+    catch(err){
+        return { status: "error", error: err.message };
     }
 }

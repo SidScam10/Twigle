@@ -22,7 +22,8 @@ Tree_Animn_Body {
 }
 
 .user-info-container {
-    display: block;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 0.5rem;
@@ -33,19 +34,44 @@ Tree_Animn_Body {
     background-color: #333;
     border-radius: 10px;
     transform: scale(1.1);
+    width: 120px;
 }
 
 .user-info {
     color: #007BFF;
     font-size: 15px;
     font-weight: bold;
-    margin-bottom: 10;
+    margin-bottom: 10px;
     padding: 0.5rem;
-    text-align: center;
+    text-align: left;
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.user-info-username-container {
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    position: relative;
+    height: 22px;
 }
 
 .user-info-username {
+    display: inline-block;
+    white-space: nowrap;
     color: rgb(74, 169, 92);
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+.user-info-username:hover {
+    animation: scroll-username 1s linear infinite alternate;
+}
+
+@keyframes scroll-username {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-40%); }
 }
 
 .logout-button {
@@ -53,9 +79,7 @@ Tree_Animn_Body {
     font-weight: bold;
     background-color: rgb(74, 169, 92);
     transform: scale(1.1);
-    margin-left: 1rem;
     margin-bottom: 1rem;
-    margin-right: auto;
     padding: 10px;
     border: 2px solid #007bff;
     border-radius: 15px;

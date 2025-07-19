@@ -1,8 +1,9 @@
 import React, {useState} from 'react'
-import { createUser } from '../util/auth'
+import { createUser, loginWithGoogle } from '../util/auth'
 import { useNavigate } from 'react-router-dom'
 import '../css files/register_css.css'
 import Tree_Logo from '../assets/tree_logo.png'
+import { FaGoogle } from "react-icons/fa";
 
 function Register() 
 {
@@ -27,6 +28,17 @@ function Register()
         }
     }
 
+    async function handleGoogleLogin() {
+        const response = await loginWithGoogle();
+        if(response.status === "success"){
+            alert("Google Login Successful");
+            navigate("/dashboard", {replace: true});
+        }
+        else {
+            alert(response.error);
+        }
+    }
+
     return (
     <div className='register_body'>
         <form className="register_form" onSubmit={registerUser}>
@@ -34,6 +46,12 @@ function Register()
             <input type="email" placeholder="Email" value={username} onChange={event => setUsername(event.target.value)}/><br/>
             <input type="password" placeholder="Password" value={password} onChange={event => setPassword(event.target.value)}/><br/>
             <input type= "submit" value="Register" /><br/>
+            <div className="divider">
+                <span>OR</span>
+            </div>
+            <div onClick={handleGoogleLogin} className="google-div">
+                <FaGoogle alt="user" className="google" />Register with Google
+            </div>
             <img src={Tree_Logo} className='register_logo'></img>
         </form>
     </div>)
